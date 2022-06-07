@@ -128,10 +128,10 @@ syn match markdownFootnoteDefinition "^\[^[^\]]\+\]:"
 
 if get(g:, 'markdown_fenced_tex', 0)
   syn include syntax/tex.vim
-  syn region markdownHighlighttex matchgroup=markdownCodeDelimiter start="\\\\(\ze[^ \n]" end="[^ \n]\zs\\\\)" keepend contains=@texMathZoneGroup
-  syn region markdownHighlighttex matchgroup=markdownCodeDelimiter start="\\\\\[" end="\\\\\]" keepend contains=@texMathZoneGroup
-  syn region markdownHighlighttex matchgroup=markdownCodeDelimiter start="\$\ze[^ \n]" end="[^ \n]\zs\$" keepend contains=@texMathZoneGroup
-  syn region markdownHighlighttex matchgroup=markdownCodeDelimiter start="\$\$" end="\$\$" keepend contains=@texMathZoneGroup
+  syn region markdownHighlight_tex matchgroup=markdownCodeDelimiter start="\\\\(\ze[^ \n]" end="[^ \n]\zs\\\\)" keepend contains=@texMathZoneGroup
+  syn region markdownHighlight_tex matchgroup=markdownCodeDelimiter start="\\\\\[" end="\\\\\]" keepend contains=@texMathZoneGroup
+  syn region markdownHighlight_tex matchgroup=markdownCodeDelimiter start="\$\ze[^ \n]" end="[^ \n]\zs\$" keepend contains=@texMathZoneGroup
+  syn region markdownHighlight_tex matchgroup=markdownCodeDelimiter start="\$\$" end="\$\$" keepend contains=@texMathZoneGroup
 endif
 
 let s:done_include = {}

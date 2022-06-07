@@ -81,7 +81,7 @@ syn region markdownH4 matchgroup=markdownH4Delimiter start=" \{,3}####\s"   end=
 syn region markdownH5 matchgroup=markdownH5Delimiter start=" \{,3}#####\s"  end="#*\s*$" keepend oneline contains=@markdownInline,markdownAutomaticLink contained
 syn region markdownH6 matchgroup=markdownH6Delimiter start=" \{,3}######\s" end="#*\s*$" keepend oneline contains=@markdownInline,markdownAutomaticLink contained
 
-syn match markdownBlockquote ">\%(\s\|$\)" contained nextgroup=@markdownBlock
+syn match markdownBlockquote ">+\%(\s\|$\)" contained nextgroup=@markdownBlock
 
 syn region markdownCodeBlock start="^\n\( \{4,}\|\t\)" end="^\ze \{,3}\S.*$" keepend
 

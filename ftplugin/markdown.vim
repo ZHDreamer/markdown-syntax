@@ -1,3 +1,13 @@
+        use {
+            'ZHDreamer/markdown-syntax',
+            config = function()
+                vim.cmd([[
+                    let g:markdown_fenced_languages = ['cpp','python','java','lua']
+                    let g:markdown_minlines = 100
+                    let g:markdown_fenced_tex = 1
+                ]])
+            end
+        }
 " Vim filetype plugin
 " Language:     Markdown
 " Maintainer:   Tim Pope <https://github.com/tpope/vim-markdown>
